@@ -840,7 +840,124 @@ th:nth-child(2), td:nth-child(2) {
 /**    catalog    **/
 .banner {
     width: 100%;
-
+    position: relative;
+}
+.banner .text{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    left: 0;
+    top: 35%;
+    color: #ffffff;
+    font-family: "Engravers Gothic Regular", sans-serif;
+    font-size: 28px;
+    letter-spacing: 10px;
+}
+.banner .title{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    color: #ffffff;
+    font-family: "Bandera Pro Heavy", sans-serif;
+    font-size: 61px;
+    height: 65px;
+    line-height: 65px;
+}
+.banner .sub-title{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    left: 0;
+    top: 55%;
+    color: #ebe100;
+    font-family: "Pacifico", sans-serif;
+    font-size: 35px;
+}
+.block-catalog .title {
+    font-size: 37px;
+    text-align: center;
+}
+.block-catalog .smooth-line {
+    margin: 2% auto 5%;
+}
+.catalog {
+    display: table;
+    width: 100%;
+    margin-bottom: 5%;
+}
+.product-row {
+    display: table-row;
+    width: 100%;
+}
+.catalog li:last-child .product-data, .catalog li:last-child .to-order{
+    border-bottom: none;
+}
+.product-row:hover {
+    background: #f7f7f8;
+}
+.product-data {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 20px 0;
+    border-bottom: 2px dotted #e6e6e6;
+}
+.to-order {
+    border-bottom: 2px dotted #e6e6e6;
+}
+.product-data li, .product-data li a, .product-data li span {
+    font-size: 24px;
+    line-height: 24px;
+}
+.product-data li a {
+    color: #6699ff;
+    text-decoration: none;
+}
+.product-data li a:hover {
+    text-decoration: underline;
+}
+.product-data li {
+    width: 19%;
+    text-align: center;
+    vertical-align: middle;
+}
+.product-data li:nth-child(1) {
+    width: 39%;
+    text-align: left;
+}
+.catalog .to-order {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: right;
+}
+.to-order button {
+    width: 180px;
+    height: 50px;
+    font-size: 19px;
+    line-height: 50px;
+    border: none;
+    outline: none;
+    background: #669933;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0 -5px 0 -1px #4b7324;
+    -moz-box-shadow: inset 0 -5px 0 -1px #4b7324;
+    box-shadow: inset 0 -5px 0 -1px #4b7324;
+    margin: 0;
+    cursor: pointer;
+}
+.to-order button:hover {
+    background: radial-gradient(circle at center, #88bb33 0, #79ac33 70%, #669933 100%);
+}
+.to-order button:active {
+    background: #669933;
+    -webkit-box-shadow: inset 4px 4px 0 0 #4b7324;
+    -moz-box-shadow: inset 4px 4px 0 0 #4b7324;
+    box-shadow: inset 4px 4px 0 0 #4b7324;
 }
 /**     footer    **/
 .block-footer {
