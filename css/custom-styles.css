@@ -240,7 +240,7 @@ nav ul .active .nav-line, nav ul .chosen .nav-line {
     background: transparent url('../images/slider-logo.png') no-repeat;
     background-size: cover;
 }
-h1 {
+.slide .title {
     position: absolute;
     font-family: "Bandera Pro Heavy", sans-serif;
     font-size: 60px;
@@ -286,6 +286,9 @@ h1 {
     height: 100%;
     background: #666633;
 }
+.products-page .professional-using {
+    background: #b84047;
+}
 .block-first .title {
     font-family: "Pacifico", sans-serif;
     font-size: 35px;
@@ -319,6 +322,9 @@ h1 {
     border-radius: 25px;
     padding: 5px 20px;
     cursor: pointer;
+}
+.products-page .professional-using a {
+    color: #6699ff;
 }
 .block-about-us, .block-partners {
     height: auto;
@@ -842,47 +848,50 @@ th:nth-child(2), td:nth-child(2) {
     width: 100%;
     position: relative;
 }
-.banner .text{
-    position: absolute;
-    width: 100%;
+.banner img {
+    display: block;
+}
+.banner-content {
+    display: inline-block;
     text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
     left: 0;
-    top: 35%;
+    margin: auto;
+    height: 160px;
+}
+.banner .text {
     color: #ffffff;
     font-family: "Engravers Gothic Regular", sans-serif;
     font-size: 28px;
+    line-height: 40px;
     letter-spacing: 10px;
 }
-.banner .title{
-    position: absolute;
-    width: 100%;
-    text-align: center;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
+.banner .title {
     color: #ffffff;
     font-family: "Bandera Pro Heavy", sans-serif;
     font-size: 61px;
-    height: 65px;
-    line-height: 65px;
+    line-height: 80px;
 }
-.banner .sub-title{
-    position: absolute;
-    width: 100%;
-    text-align: center;
-    left: 0;
-    top: 55%;
+.banner .sub-title {
     color: #ebe100;
     font-family: "Pacifico", sans-serif;
     font-size: 35px;
+    line-height: 40px;
+}
+.banner .smooth-line {
+    width: 10%;
+    background: #ebe100;
+    margin-top: 10px;
 }
 .block-catalog .title {
     font-size: 37px;
     text-align: center;
 }
 .block-catalog .smooth-line {
-    margin: 2% auto 5%;
+    margin: 1% auto 5%;
 }
 .catalog {
     display: table;
@@ -1072,6 +1081,61 @@ th:nth-child(2), td:nth-child(2) {
 .footer-social ul li:nth-child(2) a:active {background: transparent url('../images/sprite-social.png') no-repeat 87.55% center;background-size: cover;}
 .footer-social ul li:nth-child(3) a:active {background: transparent url('../images/sprite-social.png') no-repeat right center;background-size: cover;}
 
+/**   modal windows     **/
+.mz-window {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(51, 51, 51 ,1);
+    display: none;
+    z-index: 10;
+}
+.mz-form {
+    position: absolute;
+    width: 380px;
+    height: 500px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: #f7f7f8;
+    text-align: center;
+    padding: 30px 0;
+    z-index: 10;
+}
+.mz-form .form-field-wrap {
+    display: block;
+    margin: 0 auto;
+    width: 340px;
+    height: 45px;
+    position: relative;
+}
+.mz-form .form-textarea-wrap {
+    width: 340px;
+    height: 150px;
+    float: none;
+    margin: 0 auto;
+    position: relative;
+}
+.mz-form .form-field {
+    width: 100%;
+    height: 100%;
+    padding-left: 20px;
+    border: none;
+    outline: none;
+}
+.mz-form .form-textarea-wrap .form-field {
+    padding: 0 0 0 20px;
+}
+.mz-form .form-field:focus {
+    border: none;
+    outline: none;
+}
+
+/**   media queries   **/
 @media (max-width: 1366px) {
     .footer-top {
         text-align: center;
@@ -1088,6 +1152,10 @@ th:nth-child(2), td:nth-child(2) {
     }
     .sign {
         margin-right: 5%;
+    }
+    .catalog {
+        width: 95%;
+        margin: 0 auto 30px;
     }
 }
 
@@ -1257,6 +1325,21 @@ th:nth-child(2), td:nth-child(2) {
         margin-left: 0;
         width: 100%;
     }
+    .banner-content {
+        height: 120px;
+    }
+    .banner .text {
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .banner .title {
+        font-size: 42px;
+        line-height: 50px;
+    }
+    .banner .sub-title {
+        font-size: 28px;
+        line-height: 40px;
+    }
 
 }
 
@@ -1334,6 +1417,14 @@ th:nth-child(2), td:nth-child(2) {
     .block-blog img {
         width: 100%;
     }
+    .product-data li {
+        width: 32%;
+    }
+    .product-data li:nth-child(1) {
+        display: block;
+        width: 100%;
+        margin-bottom: 20px;
+    }
 }
 
 @media (max-width: 640px) {
@@ -1358,7 +1449,20 @@ th:nth-child(2), td:nth-child(2) {
         line-height: 41px;
         text-align: left;
     }
-    .sign-up {
+    .banner-content {
+        height: 90px;
+    }
+    .banner .text {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .banner .title {
+        font-size: 28px;
+        line-height: 40px;
+    }
+    .banner .sub-title {
+        font-size: 20px;
+        line-height: 30px;
     }
 
 }
@@ -1431,6 +1535,10 @@ th:nth-child(2), td:nth-child(2) {
     th, td {
         font-size: 12px;
     }
+    .product-data li, .product-data li a, .product-data li span {
+        font-size: 18px;
+        line-height: 18px;
+    }
 }
 @media (max-width: 420px) {
     th, td {
@@ -1438,5 +1546,33 @@ th:nth-child(2), td:nth-child(2) {
     }
     th:nth-child(1), td:nth-child(1) {
         padding-left: 0;
+    }
+    .banner-content {
+        height: 68px;
+    }
+    .banner .text {
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .banner .title {
+        font-size: 24px;
+        line-height: 28px;
+    }
+    .banner .sub-title {
+        font-size: 18px;
+        line-height: 22px;
+    }
+    .product-data {
+        display: block;
+        width: 100%;
+        border-bottom: none;
+    }
+    .catalog .to-order {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    .to-order button {
+        margin-bottom: 10px;
     }
 }
