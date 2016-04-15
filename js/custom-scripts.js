@@ -34,6 +34,25 @@ $(document).ready(function () {
         }
     });
 
+    $('.checkbox-image').click(function(){
+        if($(this).hasClass('checkbox-checked')){
+            $(this).removeClass('checkbox-checked');
+            $('.form-feedback .checkbox').attr('checked', false);
+        } else {
+            $(this).addClass('checkbox-checked');
+            $('.form-feedback .checkbox').attr('checked', true);
+        }
+    });
+
+    $('.form-field').focus(function() {
+        $(this).parent().find('span').css('display', 'none');
+    });
+    $('.form-field').blur(function(){
+        if(!$(this).val()) {
+            $(this).parent().find('span').css('display', 'block');
+        }
+    });
+
     $('.control').click(function() {
         var thisInput = $('.input-amount');
         var currentAmount = parseInt($(thisInput).val());
@@ -88,48 +107,8 @@ $(document).ready(function () {
         }
     });
 
-    $('.form-field').focus(function() {
-        $(this).parent().find('.icon').css('display', 'none');
-    });
-    $('.form-field').blur(function(){
-        if(!$(this).val()) {
-            $(this).parent().find('.icon').css('display', 'block');
-        }
-    });
-
-    $('.checkbox-image').click(function(){
-        if($(this).hasClass('checkbox-checked')){
-            $(this).removeClass('checkbox-checked');
-            $('.form-feedback .checkbox').attr('checked', false);
-        } else {
-            $(this).addClass('checkbox-checked');
-            $('.form-feedback .checkbox').attr('checked', true);
-        }
-    });
-
-
     $('.product-image').click(function() {
         $(this).fadeOut();
     });
-
-    /*$('.control').click(function() {
-        alert('');
-        var thisInput = $('#input-amount');
-         var currentAmount = parseInt($(thisInput).val());
-         var amountImage = $('.current-amount span');
-         console.log(thisInput);
-         console.log(currentAmount);
-         console.log(amountImage);
-         if($(this).hasClass('control-add')) {
-         $(thisInput).val(++currentAmount);
-         $(amountImage).html($(thisInput).val());
-         } else if($(this).hasClass('control-remove')) {
-         if(currentAmount > 0) {
-         $(thisInput).val(--currentAmount);
-         $(amountImage).html($(thisInput).val());
-         }
-         }
-    });*/
-
 
 });
