@@ -1090,7 +1090,7 @@ th:nth-child(2), td:nth-child(2) {
     left: 0;
     top: 0;
     background: #1a1a1a;
-    /*display: none;*/
+    display: none;
     z-index: 10;
 }
 .fv-form {
@@ -1375,19 +1375,19 @@ th:nth-child(2), td:nth-child(2) {
     .form-feedback {
         width: 100%;
     }
-    .form-feedback .fields, .form-textarea-wrap {
+    .form-feedback .fields, .form-feedback .form-textarea-wrap {
         display: block;
         float: none;
         margin: 0 auto 20px;
     }
-    .checkbox-block {
+    .form-feedback .checkbox-block {
         width: 440px;
         margin: 0 auto;
     }
-    .checkbox-block .text {
+    .form-feedback .checkbox-block .text {
         width: 400px;
     }
-    .form-field-wrap {
+    .form-feedback .form-field-wrap {
         margin: 20px 0;
     }
     .block-blog ul li {
@@ -1408,10 +1408,10 @@ th:nth-child(2), td:nth-child(2) {
         display: block;
         width: 100%;
     }
-    .form-order {
+    .product-card .form-order {
         text-align: center;
     }
-    .form-order .form-submit {
+    .product-card .form-order .form-submit {
         margin-top: 20px;
     }
     .product-image {
@@ -1424,7 +1424,7 @@ th:nth-child(2), td:nth-child(2) {
         width: 95%;
         margin: 0 auto;
     }
-    .product-name, .product-volume, .form-order, .product-description, .accordion {
+    .product-name, .product-volume, .product-card .form-order, .product-description, .accordion {
         margin-left: 0;
         width: 100%;
     }
@@ -1527,6 +1527,50 @@ th:nth-child(2), td:nth-child(2) {
         display: block;
         width: 100%;
         margin-bottom: 20px;
+    }
+    .fv-form {
+        width: 320px;
+        height: 450px;
+        padding: 10px 0;
+    }
+    .form-comment {
+        height: 320px;
+    }
+    .fv-form .title, .fv-form .sub-title {
+        font-size: 18px;
+    }
+    .fv-form .sub-title {
+        margin-bottom: 10px;
+    }
+    .fv-form .close-marker {
+        width: 30px;
+        height: 30px;
+        top: -40px;
+        right: 0;
+    }
+    .fv-form .form-field-wrap {
+        height: 40px;
+        margin-bottom: 10px;
+    }
+    .fv-form .form-textarea-wrap .form-field {
+        padding-top: 8px;
+    }
+    .fv-form .form-textarea-wrap {
+        height: 100px;
+    }
+    .fv-form .form-field-wrap span, .fv-form .form-textarea-wrap span {
+        top: 7px;
+    }
+    .fv-form .checkbox-block {
+        margin: 15px auto;
+    }
+    .fv-form .checkbox-block .text {
+        width: 85%;
+        font-size: 12px;
+    }
+    .fv-form .form-submit {
+        height: 40px;
+        line-height: 40px;
     }
 }
 
