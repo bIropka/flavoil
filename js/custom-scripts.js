@@ -1,5 +1,14 @@
 $(document).ready(function () {
 
+    $('.to-buy').click(function () {
+        $('.window-order').fadeIn();
+    });
+
+    $('.window-order').click(function (event) {
+        $target = $(event.target);
+        if ($target.hasClass('close-marker')) $('.window-order').fadeOut();
+    });
+
     $(window).scroll(function () {
         if ($(this).scrollTop() > ($(window).height()) / 3) {
             $('.block-header').stop().animate({top: 0}, 300);

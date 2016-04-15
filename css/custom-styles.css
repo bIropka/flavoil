@@ -737,7 +737,7 @@ input:focus:-ms-input-placeholder, textarea:focus:-ms-input-placeholder {color: 
     display: inline-block;
     font-size: 20px;
 }
-.form-order .form-submit {
+.form-order .to-buy {
     display: inline-block;
     width: 180px;
     height: 50px;
@@ -753,11 +753,14 @@ input:focus:-ms-input-placeholder, textarea:focus:-ms-input-placeholder {color: 
     -moz-box-shadow: inset 0 -5px 0 -1px #4b7324;
     box-shadow: inset 0 -5px 0 -1px #4b7324;
     margin: 0;
+    color: #ffffff;
+    text-align: center;
+    cursor: pointer;
 }
-.form-order .form-submit:hover {
+.form-order .to-buy:hover {
     background: radial-gradient(circle at center, #88bb33 0, #79ac33 70%, #669933 100%);
 }
-.form-order .form-submit:active {
+.form-order .to-buy:active {
     background: #669933;
     -webkit-box-shadow: inset 4px 4px 0 0 #4b7324;
     -moz-box-shadow: inset 4px 4px 0 0 #4b7324;
@@ -959,6 +962,7 @@ th:nth-child(2), td:nth-child(2) {
     box-shadow: inset 0 -5px 0 -1px #4b7324;
     margin: 0;
     cursor: pointer;
+    color: #ffffff;
 }
 .to-order button:hover {
     background: radial-gradient(circle at center, #88bb33 0, #79ac33 70%, #669933 100%);
@@ -1110,7 +1114,7 @@ th:nth-child(2), td:nth-child(2) {
     -moz-border-radius: 0;
     border-radius: 0;
 }
-.form-comment {
+.form-comment-short {
     height: 500px;
 }
 .fv-form .form-textarea-wrap, .fv-form .form-field-wrap {
@@ -1218,7 +1222,7 @@ th:nth-child(2), td:nth-child(2) {
     outline: none;
     margin: 0 auto;
 }
-.form-comment .form-submit {
+.form-comment-short .form-submit, .fv-form .form-submit {
     line-height: 60px;
     background: #669933;
     -webkit-border-radius: 5px;
@@ -1229,10 +1233,10 @@ th:nth-child(2), td:nth-child(2) {
     box-shadow: inset 0 -5px 0 -1px #4b7324;
     cursor: pointer;
 }
-.form-comment .form-submit:hover {
+.form-comment-short .form-submit:hover, .fv-form .form-submit:hover {
     background: radial-gradient(circle at center, #88bb33 0, #79ac33 70%, #669933 100%);
 }
-.form-comment .form-submit:active {
+.form-comment-short .form-submit:active, .fv-form .form-submit:hover {
     background: #669933;
     -webkit-box-shadow: inset 4px 4px 0 0 #4b7324;
     -moz-box-shadow: inset 4px 4px 0 0 #4b7324;
@@ -1411,7 +1415,7 @@ th:nth-child(2), td:nth-child(2) {
     .product-card .form-order {
         text-align: center;
     }
-    .product-card .form-order .form-submit {
+    .product-card .to-buy {
         margin-top: 20px;
     }
     .product-image {
@@ -1533,7 +1537,7 @@ th:nth-child(2), td:nth-child(2) {
         height: 450px;
         padding: 10px 0;
     }
-    .form-comment {
+    .form-comment-short {
         height: 320px;
     }
     .fv-form .title, .fv-form .sub-title {
