@@ -342,6 +342,19 @@ nav ul .active .nav-line, nav ul .chosen .nav-line {
     border: 1px solid #f7f7f8;
     background: #f7f7f8;
 }
+.products-page .image-wrap {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: none;
+}
+.products-page .image-wrap:hover {
+    border: none;
+}
+.products-page .image-wrap:active {
+    border: none;
+    background: none;
+}
 .block-about-us-wrap, .block-partners-wrap, .block-contacts-wrap {
     height: 450px;
     position: relative;
@@ -1267,6 +1280,9 @@ th:nth-child(2), td:nth-child(2) {
 }
 
 @media (max-width: 1280px) {
+    .block-header {
+        height: 82px;
+    }
     nav {
         display: none;
         width: 310px;
@@ -1309,7 +1325,7 @@ th:nth-child(2), td:nth-child(2) {
 }
 
 @media (max-width: 1080px) {
-    h1 {
+    .slide .title {
         font-size: 48px;
     }
     .slide .sub-title {
@@ -1457,7 +1473,7 @@ th:nth-child(2), td:nth-child(2) {
     .text p {
         line-height: 22px;
     }
-    h1 {
+    .slide .title {
         font-size: 38px;
     }
     .slide .sub-title {
@@ -1582,7 +1598,7 @@ th:nth-child(2), td:nth-child(2) {
     .block-first .title {
         font-size: 24px;
     }
-    h1 {
+    .slide .title {
         font-size: 28px;
     }
     .slide .sub-title {
@@ -1618,7 +1634,7 @@ th:nth-child(2), td:nth-child(2) {
 
 }
 @media (max-width: 540px) {
-    h1 {
+    .slide .title {
         font-size: 20px;
     }
     .slide .sub-title {
